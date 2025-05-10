@@ -1,6 +1,6 @@
-# Trello Hashtag Labels
+# Trello Extension
 
-A Chrome extension that transforms hashtags in Trello cards into interactive, colorful labels with advanced editing capabilities.
+A Chrome extension that adds some UI tweaks.
 
 ## Features
 
