@@ -1,0 +1,189 @@
+.custom-label-wrapper {
+    display: flex; 
+    gap: 0.25rem;
+    max-height: 20px;
+}
+.custom-labels-original,
+.custom-label .hashtag,
+.custom-number .parenthesis {
+    display: none;
+}
+.custom-label {
+    padding: 0 0.5rem; 
+    border-radius: 100px;
+    color: rgba(255,255,255,0.85);
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    position: relative;
+}
+.custom-number {
+    color: gray;
+    position: absolute; 
+    top: 0.2rem; 
+    right: 0.5rem;;
+    font-size: 0.65rem;
+}
+
+[data-testid="trello-card"]:hover .custom-number {
+    right: 2rem;
+}
+
+.custom-number::after {
+    content: "pts";
+}
+
+[data-testid="card-done-state"] {
+        margin-bottom: 0.25rem;
+}
+
+/* Colors */
+.color-green  { background-color: #10B981; }
+.color-yellow { background-color: #FBBF24; }
+.color-orange { background-color: #F97316; }
+.color-red    { background-color: #EF4444; }
+.color-purple { background-color: #A855F7; }
+.color-blue   { background-color: #3B82F6; }
+.color-sky    { background-color: #0EA5E9; }
+.color-lime   { background-color: #84CC16; }
+.color-pink   { background-color: #EC4899; }
+.color-gray   { background-color: #64748B; }
+
+/* Label Popup */
+.label-edit-popup {
+    position: fixed;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    width: 304px;
+    z-index: 9999;
+    display: none;
+    overflow: hidden;
+}
+
+.label-edit-popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.label-edit-popup-header h2 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.label-edit-popup-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.label-edit-popup-close:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+
+.label-edit-popup-content {
+    padding: 12px 16px;
+}
+
+.label-edit-popup-preview {
+    margin-bottom: 15px;
+}
+
+.label-edit-popup-preview .custom-label {
+    display: inline-block;
+    padding: 6px 12px;
+}
+
+.label-edit-popup h3 {
+    margin: 10px 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.label-edit-title-input {
+    margin-bottom: 15px;
+}
+
+.label-title-input {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 2px solid #dfe1e6;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.label-title-input:focus {
+    border-color: #0079bf;
+    outline: none;
+}
+
+.original-hashtag-note {
+    margin: 5px 0 0;
+    font-size: 12px;
+    color: #5e6c84;
+}
+
+.original-hashtag {
+    font-weight: 600;
+}
+
+.color-palette {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    margin: 12px 0 16px 0;
+}
+
+.color-tile {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+}
+
+.color-tile.selected {
+    outline: 2px solid #0079bf;
+    outline-offset: 2px;
+}
+
+.label-edit-popup-footer {
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #eee;
+}
+
+.label-edit-popup-save,
+.label-edit-popup-delete {
+    padding: 6px 12px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.label-edit-popup-save {
+    background-color: #0079bf;
+    color: white;
+}
+
+.label-edit-popup-save:hover {
+    background-color: #026aa7;
+}
+
+.label-edit-popup-delete {
+    background-color: #ebecf0;
+    color: #172b4d;
+}
+
+.label-edit-popup-delete:hover {
+    background-color: #dfe1e6;
+}
